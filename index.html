@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <base href="https://shafiquecbl.github.io/got/">
+  <!-- <base href="/">  -->
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="GOT">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <title>GOT WEB</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <script 
+           src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBctb8vkbC45NEJz4qUqZ29SW3hAtCJDsY">
+ </script>
+
+  <!-- Loading HTML -->
+
+<main>
+	<div class="preloader">
+		<div class="preloader__square"></div>
+		<div class="preloader__square"></div>
+		<div class="preloader__square"></div>
+		<div class="preloader__square"></div>
+	</div>
+	<div class="status">Loading<span class="status__dot">.</span><span class="status__dot">.</span><span class="status__dot">.</span></div>
+</main>
+
+<!-- Loading HTML -->
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('flutter-first-frame', function () {
+      navigator.serviceWorker.register('flutter_service_worker.js?v=2733803189');
+    });
+  }
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    var serviceWorkerVersion = '2733803189';
+    var scriptLoaded = false;
+    function loadMainDartJs() {
+      if (scriptLoaded) {
+        return;
+      }
+      scriptLoaded = true;
+      var scriptTag = document.createElement('script');
+      scriptTag.src = 'main.dart.js';
+      scriptTag.type = 'application/javascript';
+      document.body.append(scriptTag);
+    }
+
+    if ('serviceWorker' in navigator) {
+      // Service workers are supported. Use them.
+      window.addEventListener('load', function () {
+        // Wait for registration to finish before dropping the <script> tag.
+        // Otherwise, the browser will load the script multiple times,
+        // potentially different versions.
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+        navigator.serviceWorker.register(serviceWorkerUrl)
+          .then((reg) => {
+            function waitForActivation(serviceWorker) {
+              serviceWorker.addEventListener('statechange', () => {
+                if (serviceWorker.state == 'activated') {
+                  console.log('Installed new service worker.');
+                  loadMainDartJs();
+                }
+              });
+            }
+            if (!reg.active && (reg.installing || reg.waiting)) {
+              // No active web worker and we have installed or are installing
+              // one for the first time. Simply wait for it to activate.
+              waitForActivation(reg.installing || reg.waiting);
+            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+              // When the app updates the serviceWorkerVersion changes, so we
+              // need to ask the service worker to update.
+              console.log('New service worker available.');
+              reg.update();
+              waitForActivation(reg.installing);
+            } else {
+              // Existing service worker is still good.
+              console.log('Loading app from service worker.');
+              loadMainDartJs();
+            }
+          });
+
+        // If service worker doesn't succeed in a reasonable amount of time,
+        // fallback to plaint <script> tag.
+        setTimeout(() => {
+          if (!scriptLoaded) {
+            console.warn(
+              'Failed to load app from service worker. Falling back to plain <script> tag.',
+            );
+            loadMainDartJs();
+          }
+        }, 4000);
+      });
+    } else {
+      // Service workers not supported. Just drop the <script> tag.
+      loadMainDartJs();
+    }
+  </script>
+
+<script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyBVww7Vaa1urlZR60sF9xaO0ZpXp5pMZSk",
+  authDomain: "got-app-d1d1f.firebaseapp.com",
+  projectId: "got-app-d1d1f",
+  storageBucket: "got-app-d1d1f.appspot.com",
+  messagingSenderId: "665749499527",
+  appId: "1:665749499527:web:fb38b4a0cba5d6a9975222",
+  measurementId: "G-HTENVQYNWV"
+};
+ // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+</script>
+<script src="main.dart.js" type="application/javascript"></script>
+
+</body>
+</html>
