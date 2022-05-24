@@ -84285,7 +84285,7 @@ w9(){return A.dw(this.e,!1,B.oM,!1,B.a6,"TITLE",1,!1,null,null,null,!1,"Enter wo
 BD(){return A.dw(this.r,!1,B.eZ,!1,B.a6,"SHORT DESCRIPTION",1,!1,null,null,null,!1,"Enter short description",new A.asR())},
 uz(){var s=null
 return A.a8(s,A.dw(this.f,!0,B.eZ,!1,B.a6,"DESCRIPTION",1,!1,s,s,s,!1,"Enter description",new A.asC()),B.h,s,s,s,s,200,s,s,s,s,s,s)},
-Gx(){return A.dw(this.x,!1,B.oJ,!1,B.a6,"EVENT DATE",1,!1,null,null,new A.asA(this),!1,"Enter date",new A.asB())},
+Gx(){return A.dw(this.x,!1,B.oJ,!1,B.a6,"EVENT DATE",1,!1,null,null,new A.asA(this),!0,"Enter date",new A.asB())},
 I5(){return A.ab7(new A.asO(this),new A.asP(),A.aGf(),null,t.R3)},
 Gq(){return A.dw(this.y,!1,B.oC,!1,B.ya,"COST",1,!1,null,null,null,!1,"Enter cost",new A.asz())},
 vi(a,b){var s,r,q,p=null
@@ -84730,7 +84730,7 @@ w9(){return A.dw(this.e,!1,B.oM,!1,B.a6,"TITLE",1,!1,null,null,null,!1,"Enter wo
 BD(){return A.dw(this.r,!1,B.eZ,!1,B.a6,"SHORT DESCRIPTION",1,!1,null,null,null,!1,"Enter short description",new A.atf())},
 uz(){var s=null
 return A.a8(s,A.dw(this.f,!0,B.eZ,!1,B.a6,"DESCRIPTION",1,!1,s,s,s,!1,"Enter description",new A.asY()),B.h,s,s,s,s,200,s,s,s,s,s,s)},
-Gx(){return A.dw(this.x,!1,B.oJ,!1,B.a6,"EVENT DATE",1,!1,null,null,new A.asW(this),!1,"Enter date",new A.asX())},
+Gx(){return A.dw(this.x,!1,B.oJ,!1,B.a6,"EVENT DATE",1,!1,null,null,new A.asW(this),!0,"Enter date",new A.asX())},
 I5(){return A.ab7(new A.at9(this),new A.ata(),A.aGf(),null,t.R3)},
 Gq(){return A.dw(this.y,!1,B.oC,!1,B.ya,"COST",1,!1,null,null,null,!1,"Enter cost e.g. 100",new A.asV())},
 vi(a,b){var s,r,q,p=null
