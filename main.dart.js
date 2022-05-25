@@ -24416,7 +24416,7 @@ if(l.gn(p)!==16)A.W(A.cz("The provided buffer needs to have a length of 16."))
 o=$.aT7()
 n=o[l.h(p,0)]+o[l.h(p,1)]+o[l.h(p,2)]+o[l.h(p,3)]+"-"+o[l.h(p,4)]+o[l.h(p,5)]+"-"+o[l.h(p,6)]+o[l.h(p,7)]+"-"+o[l.h(p,8)]+o[l.h(p,9)]+"-"+o[l.h(p,10)]+o[l.h(p,11)]+o[l.h(p,12)]+o[l.h(p,13)]+o[l.h(p,14)]+o[l.h(p,15)]
 s=3
-return A.u(A.aRb(A.j7("https://maps.googleapis.com/maps/api/place/textsearch/json?query="+b+"&key=AIzaSyBctb8vkbC45NEJz4qUqZ29SW3hAtCJDsY",0,null),A.G(["Access-Control-Allow-Origin","*","X-Requested-With","XMLHttpRequest","Authorization","Bearer "+n],k,k)),$async$a9t)
+return A.u(A.aRb(A.j7("https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/textsearch/json?query="+b+"&key=AIzaSyBctb8vkbC45NEJz4qUqZ29SW3hAtCJDsY",0,null),A.G(["Access-Control-Allow-Origin","*","X-Requested-With","XMLHttpRequest","Authorization","Bearer "+n],k,k)),$async$a9t)
 case 3:m=d
 q=A.b_d(B.be.GG(0,A.aQY(J.R(A.aPF(m.e).c.a,"charset")).dT(0,m.x),null)).a
 s=1
