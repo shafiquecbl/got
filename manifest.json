@@ -1,11 +1,11 @@
 {
-    "name": "GOT WEB",
-    "short_name": "GOT WEB",
+    "name": "Get Out There",
+    "short_name": "Get Out There",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#ffffff",
-    "description": "GOT WEB",
+    "description": "Get Out There",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
